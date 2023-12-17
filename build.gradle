@@ -89,11 +89,20 @@ dependencies {
     testImplementation 'pl.pragmatists:JUnitParams:1.0.4'
 }
 
+def relocateTargets = [
+        'org.slf4j'
+]
+
 preshadowJar {
     relocate 'io.netty', 'com.github.steveice10.netty'
     relocate 'us.myles.ViaVersion.api', 'com.replaymod.replaystudio.lib.viaversion.legacyapi'
     relocate 'com.viaversion.viaversion', 'com.replaymod.replaystudio.lib.viaversion'
     relocate 'com.google.common', 'com.replaymod.replaystudio.lib.guava'
+
+
+    relocateTargets.forEach {
+        relocate it, "${project.group}.lib.$it"
+    }
 }
 
 shadowJar {
