@@ -94,6 +94,7 @@ preshadowJar {
     relocate 'us.myles.ViaVersion.api', 'com.replaymod.replaystudio.lib.viaversion.legacyapi'
     relocate 'com.viaversion.viaversion', 'com.replaymod.replaystudio.lib.viaversion'
     relocate 'com.google.common', 'com.replaymod.replaystudio.lib.guava'
+    relocate 'org.slf4j','com.replaymod.replaystudio.lib.org.slf4j'
 }
 
 shadowJar {
