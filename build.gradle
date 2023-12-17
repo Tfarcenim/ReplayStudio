@@ -81,7 +81,7 @@ dependencies {
     preshadow 'com.github.steveice10:packetlib:614d56cdc0' // 1.3
 
     implementation 'org.apache.commons:commons-lang3:3.3.2'
-    implementation 'org.apache.commons:commons-collections4:4.0'
+    compileOnly 'org.apache.commons:commons-collections4:4.0'
     implementation 'commons-cli:commons-cli:1.2'
     compileOnly(annotationProcessor("org.projectlombok:lombok:1.16.6"))
     testImplementation 'junit:junit:4.11'
@@ -94,7 +94,6 @@ preshadowJar {
     relocate 'us.myles.ViaVersion.api', 'com.replaymod.replaystudio.lib.viaversion.legacyapi'
     relocate 'com.viaversion.viaversion', 'com.replaymod.replaystudio.lib.viaversion'
     relocate 'com.google.common', 'com.replaymod.replaystudio.lib.guava'
-    relocate 'org.slf4j','com.replaymod.replaystudio.lib.org.slf4j'
 }
 
 shadowJar {
